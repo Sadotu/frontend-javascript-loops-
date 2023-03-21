@@ -16,7 +16,9 @@ const scores = [
 // 66ç
 // ==========================================
 
-
+for (let obj in scores) {
+    console.log(scores[obj].score)
+}
 
 
 
@@ -32,7 +34,25 @@ const scores = [
 // D
 // ==========================================
 
-
+for (let obj in scores) {
+    switch (true) {
+        case (scores[obj].score < 60):
+            console.log("F")
+            break
+        case (scores[obj].score < 70):
+            console.log("D")
+            break
+        case (scores[obj].score < 80):
+            console.log("C")
+            break
+        case (scores[obj].score < 90):
+            console.log("B")
+            break
+        case (scores[obj].score < 100):
+            console.log("A")
+            break
+    }
+}
 
 
 
@@ -49,8 +69,26 @@ const scores = [
 //  ];
 // ==========================================
 
-
-
+for (let obj in scores) {
+    switch (true) {
+        case (scores[obj].score < 60):
+            scores[obj].grade = "F"
+            break
+        case (scores[obj].score < 70):
+            scores[obj].grade = "D"
+            break
+        case (scores[obj].score < 80):
+            scores[obj].grade = "C"
+            break
+        case (scores[obj].score < 90):
+            scores[obj].grade = "B"
+            break
+        case (scores[obj].score < 100):
+            scores[obj].grade = "A"
+            break
+    }
+}
+console.log(scores)
 
 
 // ==========================================
@@ -75,7 +113,11 @@ const NOVIEmployees = [
 //  ];
 // ==========================================
 
+for (let obj in NOVIEmployees) {
+    NOVIEmployees[obj].email = `${NOVIEmployees[obj].firstName.toLowerCase()}.${NOVIEmployees[obj].lastName.toLowerCase()}@novi.nl`
+}
 
+console.log(NOVIEmployees)
 
 
 
@@ -131,5 +173,40 @@ const students = [
 // ]
 // ==========================================
 
+// 	3513 = Pijlsweerd
+//  3514 = Vogelenbuurt
+//  3512 = Binnenstad
+//  3531 = Lombok
+//  3572 = Wittevrouwen
+//  3581 = Oudwijk
+//  3583 = Schildersbuurt
 
-
+for (let obj in students) {
+    switch (students[obj].zipCode) {
+        case '3513':
+            students[obj].neighborhood = "Pijlsweerd"
+            break
+        case '3514':
+            students[obj].neighborhood = "Vogelenbuurt"
+            break
+        case '3512':
+            students[obj].neighborhood = "Binnenstad"
+            break
+        case '3531':
+            students[obj].neighborhood = "Lombok"
+            break
+        case '3572':
+            students[obj].neighborhood = "Wittevrouwen"
+            break
+        case '3581':
+            students[obj].neighborhood = "Oudwijk"
+            break
+        case '3583':
+            students[obj].neighborhood = "Schildersbuurt"
+            break
+        default:
+            students[obj].neighborhood = "Unknown"
+            break
+    }
+}
+console.log(students)

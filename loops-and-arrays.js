@@ -6,6 +6,10 @@
 
 const names = ["Henk", "Piet", "Fred", "Joop"];
 
+for (let name of names) {
+    console.log(`${name}je`)
+}
+
 // Verwachtte uitkomsten:
 // Vóór het script zie je de originele waardes:
 // console.log(names) geeft: ["Henk", "Piet", "Fred", "Joop"]
@@ -23,6 +27,11 @@ const names = ["Henk", "Piet", "Fred", "Joop"];
 // ==========================================
 
 const numbers = [2, 4, 5, 29, 38];
+
+for (let n of numbers) {
+    if (n % 2 === 0) { console.log(n * 2) }
+    else { console.log(n * 3) }
+}
 
 // Verwachtte uitkomsten:
 // Vóór het script zie je de originele waardes:
@@ -43,6 +52,19 @@ const numbers = [2, 4, 5, 29, 38];
 // ==========================================
 
 const squares = [30, 2, 8, 24, 11];
+
+let volume = []
+for (let n in squares) {
+    volume[n] = `Het volume van ${squares[n]} is ${squares[n] * squares[n] * squares[n]}`
+}
+console.log(volume)
+
+// of
+
+const volumes = squares.map((num) => `Het volume van ${num} is ${num ** 3}`);
+
+console.log(volumes);
+
 
 // Verwachtte uitkomsten:
 // Vóór het script zie je de originele waardes:
